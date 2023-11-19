@@ -41,7 +41,7 @@ jobs:
 
       - name: Tag and release Docker images (Self Host)
         run: |
-          docker login -u $DOCKER_USER --password-stdin $DOCKER_PASSWORD
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
           release_tag=${{ env.RELEASE_VERSION }}
 
