@@ -15,10 +15,10 @@ jobs:
             exit 1 
           fi
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: true
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          token: ${{ github.token }}
           fetch-depth: 0
 
       - name: Fail if tag is not in master
